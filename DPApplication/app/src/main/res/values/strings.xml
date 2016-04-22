@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">DP Application</string>
+    <string name="rand_string">asdfghjklqwertyuiopzxcvbnm</string>
+    <string name="Rand_string">ASDFGHJKLQWERTYUIOPZXCVBNM</string>
+    <string name="Rand_str">A-Z</string>
+    <string name="rand_str">a-z</string>
+    <string name="rand_spec">!@#$%^*()-=+_:;"/?.,\|</string>
+    <string name="rand_num">1234567890</string>
+    <string name="rand_num_str">0-9</string>
+    <string name="rand_spec_str">!@;...</string>
+    <string name="k1">1</string>
+    <string name="k2">2</string>
+    <string name="k3">3</string>
+    <string name="k4">4</string>
+    <string name="k5">5</string>
+    <string name="k6">6</string>
+    <string name="k7">7</string>
+    <string name="k8">8</string>
+    <string name="k9">9</string>
+    <string name="k0">0</string>
+    <string name="k10">A</string>
+    <string name="k11">B</string>
+    <string name="k12">C</string>
+    <string name="k13">D</string>
+    <string name="k14">E</string>
+    <string name="k15">F</string>
+    <string name="kr">=</string>
+    <string name="kp">+</string>
+    <string name="km">-</string>
+    <string name="ku">*</string>
+    <string name="kd">/</string>
+    <string name="kso">(</string>
+    <string name="ksc">)</string>
+
+</resources>

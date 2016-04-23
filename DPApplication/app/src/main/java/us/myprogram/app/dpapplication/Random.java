@@ -39,6 +39,9 @@ public class Random extends AppCompatActivity {
     }
     private int randInt(int min,int max){
         int res=0;
+        if(min==max){
+            return min;
+        }
         if((max-min)<0){
             res=(-1)*r.nextInt((-1)*(max-min));
             res+=min;
@@ -52,8 +55,20 @@ public class Random extends AppCompatActivity {
         if(rem==1) {
             CheckBox ch = (CheckBox) findViewById(R.id.gran);
             if (ch.isChecked()) {
-                int min = Integer.parseInt(((EditText) findViewById(R.id.min)).getText().toString());
-                int max = Integer.parseInt(((EditText) findViewById(R.id.max)).getText().toString());
+                EditText txt=(EditText)findViewById(R.id.min);
+                int min=0;
+                int max=0;
+                if(txt.getText().length()==0){
+                    min=0;
+                } else {
+                    min = Integer.parseInt(((EditText) findViewById(R.id.min)).getText().toString());
+                }
+                txt=(EditText)findViewById(R.id.max);
+                if(txt.getText().length()==0){
+                    max=200;
+                } else {
+                    max = Integer.parseInt(((EditText) findViewById(R.id.max)).getText().toString());
+                }
                 out.setText(Integer.toString(this.randInt(min, max)));
             } else {
                 out.setText(Integer.toString(r.nextInt()));
@@ -67,7 +82,7 @@ public class Random extends AppCompatActivity {
                 int max = Integer.parseInt(((EditText) findViewById(R.id.max)).getText().toString());
                 out.setText(Integer.toString(this.randInt(min, max-1))+Double.toString(r.nextDouble()).substring(1));
             } else {
-                out.setText(Integer.toString(r.nextInt())+Double.toString(r.nextDouble()));
+                out.setText(Integer.toString(r.nextInt())+Double.toString(r.nextDouble()).substring(1));
             }
             return;
         }
@@ -89,12 +104,18 @@ public class Random extends AppCompatActivity {
                     max=10;
                 } else {
                     max = Integer.parseInt(tm.getText().toString());
+                    if(max<0){
+                        max=Math.abs(max);
+                    }
                 }
                 tm=(EditText)findViewById(R.id.min);
                 if(tm.getText().length()==0){
                     min=0;
                 } else {
                     min = Integer.parseInt(tm.getText().toString());
+                    if(min<0){
+                        min=Math.abs(min);
+                    }
                 }
                 len=this.randInt(min, max);
 

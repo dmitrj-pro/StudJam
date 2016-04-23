@@ -22,8 +22,8 @@ public class Menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Menu.Send="";
         Menu.Developer=false;
-        Menu.date="22.04.2016";
-        version=new Version(1,1,1,5);
+        Menu.date="23.04.2016";
+        version=new Version(1,1,2,6);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         this.UpdateDeveloper();

@@ -31,5 +31,76 @@
     <string name="kd">/</string>
     <string name="kso">(</string>
     <string name="ksc">)</string>
+    
+    <!--Menu-->
+    <string name="mautor">About the Author</string>
+    <string name="mcalc">Calculator</string>
+    <string name="mwork">For developers</string>
+    <string name="mrand">random values</string>
+    <string name="mkmb">Rock paper scissors</string>
+    <string name="mHard">Hard Mode</string>
+
+    <!--Random-->
+    <string name="rrezchim">Select mode</string>
+    <string name="rinteger">Integer</string>
+    <string name="rreal">Real number</string>
+    <string name="rboolean">Boolean value</string>
+    <string name="rsting">String</string>
+    <string name="rvopr">Difficult question</string>
+    <string name="rgran">to Specify the boundaries</string>
+    <string name="rgen">Generate</string>
+    <string name="rmin">Minimum</string>
+    <string name="rmax">High</string>
+    <string name="rinput_vopr">Enter your question that can be answered Yes/no</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="rsendInt">This number threw my phone:</string>
+    <string name="rsendBool">This is a Boolean value threw my phone:</string>
+    <string name="rsendString">This line threw my phone:</string>
+    <string name="rsendVopr">So answered my phone question:</string>
+    <string name="rand_language">qwertyuiopasdfghjklzxcvbnm</string>
+    <string name="Rand_language">QWERTYUIOPASDFGHJKLZXCVBNM</string>
+    <string name="Rand_str_language">A-Z</string>
+    <string name="rand_str_language">a-z</string>
+    <string name="rminlength">Minimum length of string:</string>
+    <string name="rmaxlength">Maximum string length:</string>
+    <string name="rsymbol">string</string>
+
+    <!--Autor-->
+    <string name="aautor">Author:</string>
+    <string name="adp">Dmitry Proskurin</string>
+    <string name="aback">Back to menu</string>
+    <string name="asend">Share</string>
+    <string name="aversion">Version:</string>
+    <string name="adata">date of build:</string>
+    <string name="alibe">I like the Calculator from Dmitry PRO version</string>
+    <string name="adatas">Build</string>
+    <string name="alocal">Fresia localization:</string>
+    <string name="version"> 1.1.1.2</string>
+    <string name="ot">from</string>
+    <string name="date"> 22.04.2016</string>
+    <string name="adeveloper">Now.</string>
+
+    <string name="csend">This was considered in the calculator ABOUT Dmitry:</string>
+    <string name="csch">system base</string>
+    <string name="kclear">clear</string>
+    <string name="kl">L</string>
+    <string name="kri">R</string>
+    <string name="kdel">Удалить</string>
+
+    <!--kamen-noschnizi-bumaga-->
+    <string name="kpad">Device:</string>
+    <string name="kuser">User:</string>
+    <string name="kn">Draw</string>
+    <string name="kall">Total</string>
+    <string name="kmi">telephone We played Rock-Scissors-Paper</string>
+    <string name="kmi2">parties. And I won</string>
+    <string name="kmi3">. And the phone - </string>
+
+    <!--Send-->
+    <string name="sfrom">person you want to send:</string>
+    <string name="ssend">Send</string>
+    <string name="scalc">This message was sent from Dmitry Calculator PRO version </string>
+    <string name="sthema">I have calculated in the calculator by Dmitry ABOUT</string>
 
 </resources>

@@ -23,14 +23,14 @@ public class Autor extends AppCompatActivity {
         finish();
     }
     public void send(View view){
-        Menu.Send+=getString(R.string.alibe)+" "+Menu.version.toString()+"\n"+getString(R.string.adatas)+" "+Menu.date+"\n\n";
+        Menu.send+=getString(R.string.alibe)+" "+Menu.version.toString()+"\n"+getString(R.string.adatas)+" "+Menu.date+"\n\n";
         Intent menu=new Intent(this, Send.class);
         startActivity(menu);
     }
     public void developer(View view){
         dev++;
-        Menu.Developer=dev>4;
-        if(Menu.Developer){
+        Menu.developer=dev>4;
+        if(Menu.developer){
             Toast.makeText(Autor.this, getString(R.string.adeveloper), Toast.LENGTH_SHORT).show();
         }
     }

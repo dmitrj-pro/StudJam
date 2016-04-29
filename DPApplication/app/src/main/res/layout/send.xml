@@ -30,7 +30,7 @@
         android:id="@+id/sSend"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/stextfrom"
-        android:onClick="Sending"
+        android:onClick="sending"
         android:text="@string/ssend"/>
 
 </RelativeLayout>

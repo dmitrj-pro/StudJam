@@ -238,7 +238,7 @@ public class ExpressionEstimator{
 		else if(isDigit() || isPoint()||isSCH()){
 			for(i=position++ ; isDigit() ||isSCH()|| isPoint()  && "+-".indexOf(expression[position])!=-1; position++);
 
-			tokenValue =Calc.ToD((new String(expression,i,position-i)));
+			tokenValue =Calc.toD((new String(expression,i,position-i)));
 
 			operator = OPERATOR.NUMBER;
 		}
@@ -246,7 +246,7 @@ public class ExpressionEstimator{
 			for(i=position++ ; isDigit() ||isSCH()|| isPoint() || expression[position]=='E'
 					|| expression[position-1]=='E' && "+-".indexOf(expression[position])!=-1; position++);
 
-			tokenValue =Calc.ToD((new String(expression,i,position-i)));
+			tokenValue =Calc.toD((new String(expression,i,position-i)));
 
 			operator = OPERATOR.NUMBER;
 		}

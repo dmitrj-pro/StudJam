@@ -25,7 +25,7 @@ public class Random extends AppCompatActivity {
     //4 - generate string
     //5 - Сложный вопрос
     protected int rem;
-    private int RandVopr;
+    private int randVopr;
     protected java.util.Random r;
 
     @Override
@@ -34,7 +34,7 @@ public class Random extends AppCompatActivity {
         setContentView(R.layout.random);
         r=new java.util.Random();
         if(!Menu.isWork) {
-            RandVopr = r.nextInt() % 1023;
+            randVopr = r.nextInt() % 1023;
         }
     }
     private int randInt(int min,int max){
@@ -134,7 +134,7 @@ public class Random extends AppCompatActivity {
         }
         if(rem==5){
             String str=((EditText)findViewById(R.id.max)).getText().toString();
-            int res=RandVopr;
+            int res=randVopr;
             for(int i=0;i<str.length();i++){
                 if(str.charAt(i)==' '){
                     continue;
@@ -388,30 +388,30 @@ public class Random extends AppCompatActivity {
         switch (rem){
             case 1:
             case 2:
-                Menu.Send+=getText(R.string.rsendInt)+"\n"+out.getText();
+                Menu.send+=getText(R.string.rsendInt)+"\n"+out.getText();
                 break;
             case 3:
-                Menu.Send+=getText(R.string.rsendBool)+"\n"+out.getText();
+                Menu.send+=getText(R.string.rsendBool)+"\n"+out.getText();
                 break;
             case 4:
-                Menu.Send+=getText(R.string.rsendString)+"\n"+out.getText();
+                Menu.send+=getText(R.string.rsendString)+"\n"+out.getText();
                 break;
             case 5:
-                Menu.Send+=getText(R.string.rsendVopr)+"'";
+                Menu.send+=getText(R.string.rsendVopr)+"'";
                 String vopr=((EditText)findViewById(R.id.max)).getText().toString();
-                Menu.Send+=vopr;
+                Menu.send+=vopr;
                 /*if(!(vopr.charAt(vopr.length()-1)=='?')){
-                    Menu.Send+="?";
+                    Menu.send+="?";
                 }*/
-                Menu.Send+="':";
-                Menu.Send+="\n"+out.getText();
+                Menu.send+="':";
+                Menu.send+="\n"+out.getText();
                 break;
         }
-        Menu.Send+="\n";
+        Menu.send+="\n";
         Intent menu=new Intent(this, Send.class);
         startActivity(menu);
     }
-    public void Ctmp2(View view){
+    public void ctmp2(View view){
         CheckBox ch=(CheckBox)findViewById(R.id.tmp2);
         if(!ch.isChecked()){
             EditText tmp=(EditText)findViewById(R.id.leng);
@@ -424,7 +424,7 @@ public class Random extends AppCompatActivity {
             tmp.setText(tmp.getText() + getString(R.string.rand_language));
         }
     }
-    public void Ctmp3(View view){
+    public void ctmp3(View view){
         CheckBox ch=(CheckBox)findViewById(R.id.tmp3);
         if(!ch.isChecked()){
             EditText tmp=(EditText)findViewById(R.id.leng);
@@ -437,7 +437,7 @@ public class Random extends AppCompatActivity {
             tmp.setText(tmp.getText() + getString(R.string.Rand_string));
         }
     }
-    public void Ctmp4(View view){
+    public void ctmp4(View view){
         CheckBox ch=(CheckBox)findViewById(R.id.tmp4);
         if(!ch.isChecked()){
             EditText tmp=(EditText)findViewById(R.id.leng);
@@ -450,7 +450,7 @@ public class Random extends AppCompatActivity {
             tmp.setText(tmp.getText() + getString(R.string.rand_string));
         }
     }
-    public void Ctmp5(View view){
+    public void ctmp5(View view){
         CheckBox ch=(CheckBox)findViewById(R.id.tmp5);
         if(!ch.isChecked()){
             EditText tmp=(EditText)findViewById(R.id.leng);
@@ -463,7 +463,7 @@ public class Random extends AppCompatActivity {
             tmp.setText(tmp.getText() + getString(R.string.rand_num));
         }
     }
-    public void Ctmp6(View view){
+    public void ctmp6(View view){
         CheckBox ch=(CheckBox)findViewById(R.id.tmp6);
         if(!ch.isChecked()){
             EditText tmp=(EditText)findViewById(R.id.leng);

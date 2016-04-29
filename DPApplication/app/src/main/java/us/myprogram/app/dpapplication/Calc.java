@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Button;
 
 import org.w3c.dom.Text;
 
@@ -20,9 +21,9 @@ public class Calc extends AppCompatActivity {
     protected String str;
     static public TreeMap<String,Integer> data;
     protected boolean op;
-    private int Index;
+    private int index;
     public static int sch=16;
-    public static String ToS(double x){
+    public static String toS(double x){
         if(!Menu.isHard) {
             String res = "";
             long tmp = (int) Math.floor(x);
@@ -47,7 +48,7 @@ public class Calc extends AppCompatActivity {
         }
         return Double.toString(x);
     }
-    public static double ToD(String K){
+    public static double toD(String K){
         if(Menu.isHard){
             return Double.parseDouble(K);
         }
@@ -90,7 +91,7 @@ public class Calc extends AppCompatActivity {
         Calc.data.put("1",1);
         Calc.data.put("0",0);
         Calc.data.put("2",2);
-        this.Index=0;
+        this.index=0;
         Calc.data.put("3",3);
         Calc.data.put("4",4);
         Calc.data.put("5",5);
@@ -104,169 +105,99 @@ public class Calc extends AppCompatActivity {
         Calc.data.put("D",13);
         Calc.data.put("E",14);
         Calc.data.put("F",15);
-        this.UpdateButton();
-        this.UpdateSCH();
+
+
+        //this.UpdateButton();
+        //this.UpdateSCH();
     }
-    public void UpdateText(String strin){
+    public void updateText(String strin){
         TextView f=(TextView)findViewById(R.id.sedit);
-        String tmp=str.substring(0,this.Index)+"|"+str.substring(this.Index);
+        String tmp=str.substring(0,this.index)+"|"+str.substring(this.index);
         f.setText(tmp + strin);
         EditText g=(EditText)findViewById(R.id.edit);
         g.setText(tmp + strin);
     }
-    public void UpdateText(){
-        this.UpdateText("");
+    public void updateText(){
+        this.updateText("");
     }
     public void back(View view){
         finish();
     }
-    public void key_1(View view){
+    private void click_number(String st){
         if(op){
             op=false;
         }
-        str=str.substring(0,Index)+"1"+str.substring(Index);
-        Index++;
-        UpdateText();
+        str=str.substring(0,index)+st+str.substring(index);
+        index++;
+        updateText();
+    }
+    public void key_1(View view){
+        click_number("1");
     }
     public void key_2(View view){
-        if(op){
-            op=false;
-        }
-        str=str.substring(0,Index)+"2"+str.substring(Index);
-        Index++;
-        UpdateText();
+        click_number("2");
     }
     public void key_3(View view){
-        if(op){
-            op=false;
-        }
-        str=str.substring(0,Index)+"3"+str.substring(Index);
-        Index++;
-        UpdateText();
+        click_number("3");
     }
     public void key_4(View view){
-        if(op){
-            op=false;
-        }
-        str=str.substring(0,Index)+"4"+str.substring(Index);
-        Index++;
-        UpdateText();
+        click_number("4");
     }
     public void key_5(View view){
-        if(op){
-            op=false;
-        }
-        str=str.substring(0,Index)+"5"+str.substring(Index);
-        Index++;
-        UpdateText();
+        click_number("5");
     }
     public void key_6(View view){
-        if(op){
-            op=false;
-        }
-        str=str.substring(0,Index)+"6"+str.substring(Index);
-        Index++;
-        UpdateText();
+        click_number("6");
     }
     public void key_7(View view){
-        if(op){
-            op=false;
-        }
-        str=str.substring(0,Index)+"7"+str.substring(Index);
-        Index++;
-        UpdateText();
+        click_number("7");
     }
     public void key_8(View view){
-        if(op){
-            op=false;
-        }
-        str=str.substring(0,Index)+"8"+str.substring(Index);
-        Index++;
-        UpdateText();
+        click_number("8");
     }
     public void key_9(View view){
-        if(op){
-            op=false;
-        }
-        str=str.substring(0,Index)+"9"+str.substring(Index);
-        Index++;
-        UpdateText();
+        click_number("9");
     }
     public void key_0(View view){
-        if(op){
-            op=false;
-        }
-        str=str.substring(0,Index)+"0"+str.substring(Index);
-        Index++;
-        UpdateText();
+        click_number("0");
     }
     public void key_A(View view){
-        if(op){
-            op=false;
-        }
-        str=str.substring(0,Index)+"A"+str.substring(Index);
-        Index++;
-        UpdateText();
+        click_number("A");
     }
     public void key_B(View view){
-        if(op){
-            op=false;
-        }
-        str=str.substring(0,Index)+"B"+str.substring(Index);
-        Index++;
-        UpdateText();
+        click_number("B");
     }
     public void key_C(View view){
-        if(op){
-            op=false;
-        }
-        str=str.substring(0,Index)+"C"+str.substring(Index);
-        Index++;
-        UpdateText();
+        click_number("C");
     }
     public void key_D(View view){
-        if(op){
-            op=false;
-        }
-        str=str.substring(0,Index)+"D"+str.substring(Index);
-        Index++;
-        UpdateText();
+        click_number("D");
     }
     public void key_E(View view){
-        if(op){
-            op=false;
-        }
-        str=str.substring(0,Index)+"E"+str.substring(Index);
-        Index++;
-        UpdateText();
+        click_number("E");
     }
     public void key_F(View view){
-        if(op){
-            op=false;
-        }
-        str=str.substring(0,Index)+"F"+str.substring(Index);
-        Index++;
-        UpdateText();
+        click_number("F");
     }
     public void key_so(View view){
-        if(Index!=str.length()){
-            str=str.substring(0,Index)+"("+str.substring(Index);
-            Index++;
-            UpdateText();
+        if(index!=str.length()){
+            str=str.substring(0,index)+"("+str.substring(index);
+            index++;
+            updateText();
             return;
         }
         if(op){
-            str=str.substring(0,Index)+"("+str.substring(Index)+")";
-            Index++;
-            UpdateText();
+            str=str.substring(0,index)+"("+str.substring(index)+")";
+            index++;
+            updateText();
             op=false;
         }
     }
     public void key_sc(View view){
-        if(Index!=str.length()){
-            str=str.substring(0,Index)+")"+str.substring(Index);
-            Index++;
-            UpdateText();
+        if(index!=str.length()){
+            str=str.substring(0,index)+")"+str.substring(index);
+            index++;
+            updateText();
             return;
         }
     }
@@ -283,56 +214,38 @@ public class Calc extends AppCompatActivity {
         } catch (Exception e){
 
         }
-        f.setText(Calc.ToS(res));
-        g.setText(Calc.ToS(res));
+        f.setText(Calc.toS(res));
+        g.setText(Calc.toS(res));
+    }
+    private void key_operator(String st){
+        if(index!=str.length()){
+            str=str.substring(0,index)+st+str.substring(index);
+            index++;
+            updateText();
+            return;
+        }
+        if(op){
+            for(int i=str.length()-1; i>=0;i++){
+                try {
+                    char c = str.charAt(i);
+                } catch (Exception ee){
+                    str=str.substring(0,i-1);
+                    str+=st;
+                    break;
+                }
+            }
+        } else {
+            str+=st;
+            index+=1;
+        }
+        op=true;
+        updateText();
     }
     public void key_m(View view){
-        if(Index!=str.length()){
-            str=str.substring(0,Index)+"-"+str.substring(Index);
-            Index++;
-            UpdateText();
-            return;
-        }
-        if(op){
-            for(int i=str.length()-1; i>=0;i++){
-                try {
-                    char c = str.charAt(i);
-                } catch (Exception ee){
-                    str=str.substring(0,i-1);
-                    str+="-";
-                    break;
-                }
-            }
-        } else {
-            str+="-";
-            Index+=1;
-        }
-        op=true;
-        UpdateText();
+        this.key_operator("-");
     }
     public void key_u(View view){
-        if(Index!=str.length()){
-            str=str.substring(0,Index)+"*"+str.substring(Index);
-            Index+=1;
-            UpdateText();
-            return;
-        }
-        if(op){
-            for(int i=str.length()-1; i>=0;i++){
-                try {
-                    char c = str.charAt(i);
-                } catch (Exception ee){
-                    str=str.substring(0,i-1);
-                    str+="*";
-                    break;
-                }
-            }
-        } else {
-            str+="*";
-            Index+=1;
-        }
-        op=true;
-        UpdateText();
+        this.key_operator("*");
     }
     public void sm(View view){
         if(Calc.sch>2){
@@ -340,9 +253,9 @@ public class Calc extends AppCompatActivity {
             sch--;
             this.UpdateButton();
             this.UpdateSCH();
-            str=Calc.ToS(res);
-            Index=str.length();
-            this.UpdateText();
+            str=Calc.toS(res);
+            index=str.length();
+            this.updateText();
         }
     }
     private void UpdateSCH(){
@@ -440,100 +353,58 @@ public class Calc extends AppCompatActivity {
             sch++;
             this.UpdateButton();
             this.UpdateSCH();
-            str =Calc.ToS(res);
-            Index=str.length();
-            this.UpdateText();
+            str =Calc.toS(res);
+            index=str.length();
+            this.updateText();
         }
     }
     public void key_p(View view){
-        if(Index!=str.length()){
-            str=str.substring(0,Index)+"+"+str.substring(Index);
-            Index+=1;
-            UpdateText();
-            return;
-        }
-        if(op){
-            for(int i=str.length()-1; i>=0;i++){
-                try {
-                    char c = str.charAt(i);
-                } catch (Exception e){
-                    str=str.substring(0,i-1);
-                    str+="+";
-                    break;
-                }
-            }
-        } else {
-            str+="+";
-            Index+=1;
-        }
-        op=true;
-        UpdateText();
+        this.key_operator("+");
     }
     public void key_d(View view){
-        if(Index!=str.length()){
-            str=str.substring(0,Index)+"/"+str.substring(Index);
-            Index+=1;
-            UpdateText();
-            return;
-        }
-        if(op){
-            for(int i=str.length()-1; i>=0;i++){
-                try {
-                    char c = str.charAt(i);
-                } catch (Exception e){
-                    str=str.substring(0,i-1);
-                    str+="/";
-                    break;
-                }
-            }
-        } else {
-            str+="/";
-            Index+=1;
-        }
-        op=true;
-        UpdateText();
+        this.key_operator("/");
     }
     public void key_Clear(View view){
         str="";
-        Index=0;
-        UpdateText();
+        index=0;
+        updateText();
     }
     public void key_shr(View view){
-        if(Index<str.length())
-            Index++;
-        UpdateText();
+        if(index<str.length())
+            index++;
+        updateText();
     }
     public void key_shl(View view){
-        if(Index>0)
-            Index--;
-        UpdateText();
+        if(index>0)
+            index--;
+        updateText();
     }
     public void key_del(View view){
         if(str.length()==0){
             return;
         }
-        str=str.substring(0,Index-1)+str.substring(Index);
+        str=str.substring(0,index-1)+str.substring(index);
         op=false;
-        Index--;
+        index--;
         if(str.length()==0){
-            UpdateText();
+            updateText();
             return;
         }
         try{
-            if(str.charAt(Index-1)==' '){
+            if(str.charAt(index-1)==' '){
                 throw new ExceptionInInitializerError();
 
             }
         } catch (ExceptionInInitializerError e){
-            str=str.substring(0,Index-1)+str.substring(Index);
-            Index--;
+            str=str.substring(0,index-1)+str.substring(index);
+            index--;
             this.op=!this.op;
         }
-        UpdateText();
+        updateText();
     }
     public void send(View view){
         TextView t=(TextView) findViewById(R.id.sedit);
-        Menu.Send+=getString(R.string.csend)+"\n"+this.str+" = "+t.getText().toString()+"\n"+getString(R.string.csch)+" "+Integer.toString(Calc.sch)+"\n\n";
+        Menu.send+=getString(R.string.csend)+"\n"+this.str+" = "+t.getText().toString()+"\n"+getString(R.string.csch)+" "+Integer.toString(Calc.sch)+"\n\n";
         Intent menu=new Intent(this, Send.class);
         startActivity(menu);
     }

@@ -13,9 +13,9 @@ public class Version {
     //3 - готовое издание
     private int _type;
     //Номер публичного издания
-    private int _NumerPublicVersion;
+    private int _numerPublicVersion;
     //Номер непубличного издания
-    private int _NumerPrivateVersion;
+    private int _numerPrivateVersion;
     public Version(int version, int type, int publics, int privates){
         if(version<1){
             throw new ExceptionInInitializerError("Некоректный параметр version");
@@ -28,14 +28,14 @@ public class Version {
         if(publics<0){
             throw new ExceptionInInitializerError("Некоректный параметр publics");
         }
-        _NumerPublicVersion=publics;
+        _numerPublicVersion=publics;
         if(privates<0){
             throw new ExceptionInInitializerError("Некоректный параметр privates");
         }
-        _NumerPrivateVersion=privates;
+        _numerPrivateVersion=privates;
     }
     @Override
     public String toString(){
-        return Integer.toString(_version)+"."+Integer.toString(_type)+"."+Integer.toString(_NumerPublicVersion)+"."+Integer.toString(_NumerPrivateVersion);
+        return Integer.toString(_version)+"."+Integer.toString(_type)+"."+Integer.toString(_numerPublicVersion)+"."+Integer.toString(_numerPrivateVersion);
     }
 }

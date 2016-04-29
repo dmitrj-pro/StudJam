@@ -122,35 +122,35 @@
         android:layout_height="wrap_content"
         android:id="@+id/tmp2"
         android:visibility="invisible"
-        android:onClick="Ctmp2"
+        android:onClick="ctmp2"
         />
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tmp3"
         android:visibility="invisible"
-        android:onClick="Ctmp3"
+        android:onClick="ctmp3"
         />
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tmp4"
         android:visibility="invisible"
-        android:onClick="Ctmp4"
+        android:onClick="ctmp4"
         />
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tmp5"
         android:visibility="invisible"
-        android:onClick="Ctmp5"
+        android:onClick="ctmp5"
         />
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tmp6"
         android:visibility="invisible"
-        android:onClick="Ctmp6"
+        android:onClick="ctmp6"
         />
     <EditText
         android:layout_width="wrap_content"

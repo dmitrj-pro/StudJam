@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">DP Application</string>
+    <string name="build_date">29.04.2016</string>
     <string name="rand_string">asdfghjklqwertyuiopzxcvbnm</string>
     <string name="Rand_string">ASDFGHJKLQWERTYUIOPZXCVBNM</string>
     <string name="Rand_str">A-Z</string>
@@ -31,7 +32,8 @@
     <string name="kd">/</string>
     <string name="kso">(</string>
     <string name="ksc">)</string>
-    
+
+    <!--Yandex Translate-->
     <!--Menu-->
     <string name="mautor">About the Author</string>
     <string name="mcalc">Calculator</string>
